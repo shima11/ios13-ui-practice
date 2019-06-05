@@ -13,9 +13,12 @@
 		D410BAB722A8864200D66872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D410BAB522A8864200D66872 /* Main.storyboard */; };
 		D410BAB922A8864300D66872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D410BAB822A8864300D66872 /* Assets.xcassets */; };
 		D410BABC22A8864300D66872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D410BABA22A8864300D66872 /* LaunchScreen.storyboard */; };
+		E67C786CBD0F826E69625C29 /* Pods_ios13_ui_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2740E97628CF5F95ADF1224 /* Pods_ios13_ui_practice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00E29A9C9CEB062BE9099A56 /* Pods-ios13-ui-practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios13-ui-practice.debug.xcconfig"; path = "Target Support Files/Pods-ios13-ui-practice/Pods-ios13-ui-practice.debug.xcconfig"; sourceTree = "<group>"; };
+		C66014C187CE4984E6064B11 /* Pods-ios13-ui-practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios13-ui-practice.release.xcconfig"; path = "Target Support Files/Pods-ios13-ui-practice/Pods-ios13-ui-practice.release.xcconfig"; sourceTree = "<group>"; };
 		D410BAAC22A8864200D66872 /* ios13-ui-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios13-ui-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D410BAAF22A8864200D66872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D410BAB122A8864200D66872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D410BAB822A8864300D66872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D410BABB22A8864300D66872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D410BABD22A8864300D66872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2740E97628CF5F95ADF1224 /* Pods_ios13_ui_practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios13_ui_practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67C786CBD0F826E69625C29 /* Pods_ios13_ui_practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B48B7DEC4BA3A91B96764A4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2740E97628CF5F95ADF1224 /* Pods_ios13_ui_practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9848850A522EDEF2B7E4A80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00E29A9C9CEB062BE9099A56 /* Pods-ios13-ui-practice.debug.xcconfig */,
+				C66014C187CE4984E6064B11 /* Pods-ios13-ui-practice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D410BAA322A8864200D66872 = {
 			isa = PBXGroup;
 			children = (
 				D410BAAE22A8864200D66872 /* ios13-ui-practice */,
 				D410BAAD22A8864200D66872 /* Products */,
+				C9848850A522EDEF2B7E4A80 /* Pods */,
+				B48B7DEC4BA3A91B96764A4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D410BAC022A8864300D66872 /* Build configuration list for PBXNativeTarget "ios13-ui-practice" */;
 			buildPhases = (
+				48F2DF0605A2A5568AD99F7C /* [CP] Check Pods Manifest.lock */,
 				D410BAA822A8864200D66872 /* Sources */,
 				D410BAA922A8864200D66872 /* Frameworks */,
 				D410BAAA22A8864200D66872 /* Resources */,
+				4142FA90EE4F8C3CF880D703 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4142FA90EE4F8C3CF880D703 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios13-ui-practice/Pods-ios13-ui-practice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-22/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios13-ui-practice/Pods-ios13-ui-practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48F2DF0605A2A5568AD99F7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios13-ui-practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D410BAA822A8864200D66872 /* Sources */ = {
@@ -282,6 +358,7 @@
 		};
 		D410BAC122A8864300D66872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00E29A9C9CEB062BE9099A56 /* Pods-ios13-ui-practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +376,7 @@
 		};
 		D410BAC222A8864300D66872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66014C187CE4984E6064B11 /* Pods-ios13-ui-practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
