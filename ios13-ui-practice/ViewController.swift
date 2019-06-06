@@ -7,36 +7,57 @@
 //
 
 import UIKit
+import EasyPeasy
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let segment = UISegmentedControl()
-        segment.insertSegment(withTitle: "1", at: 0, animated: false)
-        segment.insertSegment(withTitle: "2", at: 1, animated: false)
-        segment.insertSegment(withTitle: "3", at: 2, animated: false)
-        
-        segment.frame = .init(x: 0, y: 0, width: 120, height: 40)
+        let segment = UISegmentedControl(items: [
+            "Tokyo", "SanJose", "Korean"
+            ])
         segment.tintColor = .darkGray
         segment.backgroundColor = .lightGray
-        segment.needsUpdateConstraints()
+        segment.layoutIfNeeded()
         
-        let activity = UIActivityIndicatorView(style: .large)
-        activity.color = .darkGray
+        segment.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        let activity = UIActivityIndicatorView(style: .medium)
+        activity.color = .orange
         activity.startAnimating()
-        
+
+
+        let stepper = UIStepper()
+        stepper.maximumValue = 100
+        stepper.minimumValue = 0
+        stepper.largeContentTitle = "title"
+        stepper.addTarget(self, action: #selector(didChangeStepperValue(sender:)), for: .valueChanged)
+        stepper.tintColor = .darkGray
+        stepper.backgroundColor = .lightGray
+        stepper.autorepeat = true
+        stepper.layer.cornerRadius = 8
+        stepper.layer.cornerCurve = .continuous
+        stepper.clipsToBounds = true
+
         let stackView = UIStackView(arrangedSubviews: [
             segment,
-            activity
+            activity,
+            stepper
             ])
+        stackView.spacing = 24
+        stackView.alignment = .center
         stackView.axis = .vertical
-        stackView.frame = view.bounds
-        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(stackView)
+        
+        stackView.easy.layout(
+            Center()
+        )
     }
 
+    @objc func didChangeStepperValue(sender: UIStepper) {
+        print("sender value:", sender.value)
+    }
 
 }
 
